@@ -1,0 +1,43 @@
+id = "shanhai-translate"
+name = "ShanHai Translate"
+description = "Translate selected text and convert identifier naming styles in Zed code actions with Apibyte."
+version = "0.1.0"
+schema_version = 1
+authors = ["magegojo"]
+repository = "https://github.com/MageGojo/shanhai-translate"
+
+[language_servers.shanhai-translate-lsp]
+name = "ShanHai Translate LSP"
+languages = [
+  "Plain Text",
+  "Markdown",
+  "Rust",
+  "Python",
+  "TypeScript",
+  "TSX",
+  "JavaScript",
+  "JSON",
+  "YAML",
+  "Go",
+  "HTML",
+  "CSS",
+]
+
+[language_servers.shanhai-translate-lsp.language_ids]
+"Plain Text" = "plaintext"
+"Markdown" = "markdown"
+"Rust" = "rust"
+"Python" = "python"
+"TypeScript" = "typescript"
+"TSX" = "typescriptreact"
+"JavaScript" = "javascript"
+"JSON" = "json"
+"YAML" = "yaml"
+"Go" = "go"
+"HTML" = "html"
+"CSS" = "css"
+
+[[capabilities]]
+kind = "process:exec"
+command = "*"
+args = ["**"]
